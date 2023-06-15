@@ -4,3 +4,8 @@ body{
 h1{
     color:white ;
 }
+
+#loadMoreBtn {
+    display: block;
+    margin: 20px auto;
+  }
