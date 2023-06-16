@@ -1,11 +1,68 @@
 body{
-    background-color: black;
-}
-h1{
-    color:white ;
+    /* background-color: black; */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-#loadMoreBtn {
+header{
+    background-color: black;
+    color: #fff;
+    padding: 20px;
+}
+
+header h1{
+    margin: 0;
+}
+
+#search-form{
+    margin-top: 20px;
+}
+
+#search-input{
+    padding: 5px;
+}
+
+#clear-button{
+    margin-left: 10px;
+}
+
+main{
+    padding: 20px;
+}
+
+#movies-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  
+  .movie-item {
+    width: calc(33.33% - 20px); /* Adjust the width as needed */
+    margin: 10px;
+  }
+
+movies-list{
+    list-style: none;
+    padding: 0;
+}
+
+.movie-poster{
+    width:200px;
+    height:auto;
+    margin-right: 0px;
+}
+
+.movie-title{
+    font-weight: bold;
+}
+
+.movie-votes{
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+#load-more-button{
     display: block;
     margin: 20px auto;
-  }
+}
