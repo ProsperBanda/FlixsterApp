@@ -34,16 +34,19 @@ function displayMovies(movies){
         const moviePoster = document.createElement('img');
 
 
-
+        if(movie.poster_path == null){
+            moviePoster.src = 'nullimg.png';
+        }
+        else{
         moviePoster.src = `https://image.tmdb.org/t/p/w200/${movie.poster_path}`;
+    }
         moviePoster.alt = movie.title;
         moviePoster.className = 'movie-poster';
         movieItem.appendChild(moviePoster);
-       
         const movieDetails = document.createElement('div');
         movieDetails.innerHTML = `
         <h2 class="movie-title">${movie.title}</h2>
-        <p class="movie-votes">Votes: ${movie.vote_count}</p>
+        <p class="movie-votes">⭐️ Votes: ${movie.vote_count}</p>
       `;
 
         movieItem.appendChild(moviePoster);
@@ -54,7 +57,7 @@ function displayMovies(movies){
 
     //Load more movies when the Load More Button is clicked
     document.getElementById('load-more-button').addEventListener('click', fetchCurrentMovies);
-    console.log("Button clicked!");
+    //console.log("Button clicked!");
 
     //Search for movies
     document.getElementById('search-form').addEventListener('submit', function(event){
@@ -69,9 +72,8 @@ function displayMovies(movies){
 
     //Clear search results and display previous current movies
     document.getElementById('clear-button').addEventListener('click', function(){
-        displayMovies(currentMovies);
         console.log("Button clicked!");
-    });
+});
 
     //Search movies using the API
     async function searchMovies(query){
@@ -91,6 +93,10 @@ function displayMovies(movies){
 
     }
 }
+
+
+
+
 
 //Fetch initial movies
 fetchCurrentMovies();
