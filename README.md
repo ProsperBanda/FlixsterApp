@@ -1,5 +1,3 @@
-📝 **NOTE** Use this template to initialize the contents of a README.md file for your application. As you work on your assignment over the course of the week, update the required or stretch features lists to indicate which features you have completed by changing `[ ]` to `[x]`. (🚫 Remove this paragraph before submitting your assignment.)
-
 ## Week 1 Assignment: Flixster
 
 Submitted by: Prosper Banda
@@ -42,9 +40,9 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 
 ### Walkthrough Video
 
-`TODO://` Add the embedded URL code to your animated app walkthrough below, `ADD_EMBEDDED_CODE_HERE`. Make sure the video or gif actually renders and animates when viewing this README. (🚫 Remove this paragraph after adding walkthrough video)
-
 `ADD_EMBEDDED_CODE_HERE`
+
+<div style="position: relative; padding-bottom: 64.90384615384616%; height: 0;"><iframe src="https://www.loom.com/embed/aa8c5cabe0c34becb5f731d9793cb18e?sid=70df5ed9-4e03-4abc-af54-8c9fcd919736" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
 ### Reflection
 
@@ -53,7 +51,7 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 Yes, the labs helped me to build this project. The debugging tools learnt from the lab helped me catch some errors and manage to fix them. The stretch features were the ones I felt unprepared for.
 
 - If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
-  
+
 With more time I would have added more features including the stretch features and also use more styling for an improved user experience.
 
 - Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
