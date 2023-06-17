@@ -12,6 +12,7 @@ let currentMovies = [];
 
 //Fetch the list of current movies from TMDB API
 async function fetchCurrentMovies(){
+    console.log("hello!")
     try{
         const response = await fetch(`${baseUrl}/movie/now_playing?api_key=${apiKey}&page=${page}`);
         const data = await response.json();
@@ -26,7 +27,7 @@ async function fetchCurrentMovies(){
 //Display movies on the webpage
 function displayMovies(movies){
     const moviesList = document.getElementById('movies-list');
-    
+    moviesList.innerHTML = "";
     movies.forEach(movie => {
         const movieItem = document.createElement('li');
         movieItem.className = 'movie-item';
@@ -70,10 +71,7 @@ function displayMovies(movies){
         }
     });
 
-    //Clear search results and display previous current movies
-    document.getElementById('clear-button').addEventListener('click', function(){
-        console.log("Button clicked!");
-});
+
 
     //Search movies using the API
     async function searchMovies(query){
@@ -94,7 +92,21 @@ function displayMovies(movies){
     }
 }
 
+//Clear search results and display previous current movies
+    clearBtn.addEventListener("click", async (event) => {
+        event.preventDefault(); // Prevent form submission (optional)
 
+            try{
+                const response = await fetch(`${baseUrl}/movie/now_playing?api_key=${apiKey}&page=${1}`);
+                page = 1;
+                const data = await response.json();
+                currentMovies = currentMovies.concat(data.results);
+                displayMovies(data.results);
+            } catch(error){
+                console.log(error);
+            }
+            console.log("Button Clicked");
+        })
 
 
 
